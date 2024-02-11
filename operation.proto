@@ -8,13 +8,13 @@ package operation;
 //TODO : Defines the service, the request and Reply
 
 service Operation {
-    rpc ProcessOperation(OperationRequest)
-}
+    rpc ProcessOperation(OperationRequest) returns (OperationReply) {};
+};
 
 message OperationRequest{
-string task = 1
-}
+string task = 1;
+};
 
 message OperationReply{
-string message = 1
-}
+string message = 1;
+};

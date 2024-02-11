@@ -16,7 +16,7 @@
  * limitations under the License.
  *
  */
- 
+
 #include <iostream>
 #include <memory>
 #include <string>
@@ -57,7 +57,7 @@ public:
 
 
 //TODO : send the gRPC call
-        Status status = stub_->ProcessOperation(&context, request, &reply)
+        Status status = stub_->ProcessOperation(&context, request, &reply);
 
         char cstr2[reply.message().size() + 1];
         strcpy(cstr2, reply.message().c_str());
@@ -88,7 +88,7 @@ int main(int argc, char **argv) {
 
 //TODO : modify this code to take the task as command line parameter
 
-    
+
     std::string task(argv[1]);
     std::string reply = manager.ProcessOperation(task);
     std::cout << "Reply from server : " << reply << std::endl;
